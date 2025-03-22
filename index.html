@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomyStay</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar-container">
+            <a href="/" class="logo">HomyStay</a>
+
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/">Home</a>
+                <a href="#room-section">Rooms</a>
+                <a href="#booking-section">Bookings</a>
+                <a href="#contect-section">Contact</a>
+            </div>
+
+            <div class="auth-buttons">
+                <a href="/login" class="login">Login</a>
+                <a href="/register" class="register">Register</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section class="home-section scroll-animate">
+        <div class="overlay"></div>
+        <div class="home-content">
+            <h1>Welcome to HomyStay</h1>
+            <p>Your comfort is our priority. Book cozy rooms and enjoy a relaxing stay with us.</p>
+            <a href="/rooms">Book a Room</a>
+        </div>
+    </section>
+
+
+
+    <!-- Room section -->
+    <section class="room-section" id="room-section">
+        <h2>Our Rooms</h2>
+        <div class="rooms-grid">
+            <!-- Room Card 1 -->
+            <div class="room-card scroll-animate"> <!-- Card 1 -->
+
+                <img src="assets/Images/house1.jpg"
+                    alt="Deluxe Room">
+                <div class="room-info">
+                    <h3>Deluxe Room</h3>
+                    <p>Spacious room with king-size bed, Wi-Fi, and balcony view.</p>
+                    <div class="price">₹9,000 / night</div>
+                    <a href="/bookings">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Room Card 2 -->
+            <div class="room-card scroll-animate">
+                <img src="assets/Images/house2.jpg"
+                    alt="Standard Room">
+                <div class="room-info">
+                    <h3>Standard Room</h3>
+                    <p>Comfortable room with queen-size bed and modern amenities.</p>
+                    <div class="price">₹6,500 / night</div>
+                    <a href="/bookings">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Room Card 3 -->
+            <div class="room-card scroll-animate">
+                <img src="assets/Images/house3.jpg"
+                    alt="Executive Suite">
+                <div class="room-info">
+                    <h3>Executive Suite</h3>
+                    <p>Luxury suite with living area, kitchenette, and premium services.</p>
+                    <div class="price">₹13,500 / night</div>
+                    <a href="/bookings">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Room Card 4 -->
+            <div class="room-card scroll-animate">
+                <img src="assets/Images/house4.jpg"
+                    alt="Single Room">
+                <div class="room-info">
+                    <h3>Single Room</h3>
+                    <p>Cozy room ideal for solo travelers with all basic facilities.</p>
+                    <div class="price">₹4,500 / night</div>
+                    <a href="/bookings">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Room Card 5 -->
+            <div class="room-card scroll-animate">
+                <img src="assets/Images/house6.avif"
+                    alt="Family Suite">
+                <div class="room-info">
+                    <h3>Family Suite</h3>
+                    <p>Spacious suite perfect for families, includes multiple beds.</p>
+                    <div class="price">₹11,000 / night</div>
+                    <a href="/bookings">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Room Card 6 -->
+            <div class="room-card scroll-animate">
+                <img src="assets/Images/house7.avif"
+                    alt="Budget Room">
+                <div class="room-info">
+                    <h3>Budget Room</h3>
+                    <p>Affordable room for budget-conscious guests with essentials.</p>
+                    <div class="price">₹3,200 / night</div>
+                    <a href="/bookings">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+
+<section class="booking-section scroll-animate" id="booking-section">
+    <div class="booking-container">
+        <!-- Left Side - HomyStay Info -->
+        <div class="booking-info">
+            <h1>HomyStay</h1>
+            <p>Your comfort is our priority. Enjoy a cozy and relaxing stay with us.</p>
+        </div>
+
+        <!-- Right Side - Booking Form -->
+        <div class="booking-form-container">
+            <h2>Book Your Stay</h2>
+            <p>Fill in your details to reserve your room today!</p>
+
+            <form class="booking-form" action="/submit-booking" method="POST" aria-label="Booking Form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="checkin">Check-In Date</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout">Check-Out Date</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="10" required placeholder="2">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Check Availability</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    <section id="contect-section" class="contact-section scroll-animate">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@HomyStay.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Coimbatore, Tamil Nadu, India</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>  <!-- X (Twitter) -->
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer-section scroll-animate">
+        <div class="footer-container">
+            <!-- Branding -->
+            <div class="footer-brand">
+                <h3>HomyStay</h3>
+                <p>Your comfort is our priority. Enjoy a cozy and relaxing stay with us.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="#room-section">Rooms</a> </li>
+                    <li> <a href="#booking-section">Bookings</a> </li>
+                    <li> <a href="#contect-section">Contact</a> </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ info@HomyStay.com</p>
+                <p>🏠 123 Coimbatore, Tamil Nadu, India</p>
+
+                <p>Follow us on social media:</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> 
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 HomyStay. All rights reserved.</p>
+ 
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</body>
+
+</html>
